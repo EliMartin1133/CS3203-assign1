@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+    html {
+        background-color:darkslateblue;
+    }
+    table {
+        margin: 0 auto;
+        font-size: medium;
+        border: 1px solid black;
+        border-radius:4px
+    }
+    td {
+        background-color: lightblue;
+        border: 1px solid black;
+    }
+
+    th,
+    td {
+        font-weight: bold;
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+    td {
+        font-weight: lighter;
+    }
+</style>
+
+    <head >
+    <meta charset="utf-8" >
+    <script src="./index.js" > </script >
+    </head >
+    <body onload="fillTable()">
+    <div>
+    <h1 >
+    <button id="Get Tweets/Time Created" onclick="DisplayTweets()" > Get Tweets/Time Created</button >          <!--button that utilizes the function DisplayTweets() in the index.js-->
+    <button id="GetID" onclick="GetUserIDs()" > Get User ID's</button>                                          <!--button that utilizes the function GetUserIds() in the index.js-->
+    </h1 >
+    Get Tweets from ID <input type="text" id="IDinput" />                                                       <!--text box that takes IDinput-->
+    <button onclick="GetTweetsFromID()" > Submit</button >                                                      <!--button that utilizes the function GetTweetFromID() in the index.js-->
+    </div >
+    <div id="tweets" style="background-color:lightcyan; border:1px solid black; border-radius:4px">             <!--div that sorts the tweets ids-->
+    </div>
+    <div id="users" style="background-color:lightcyan; border:1px solid black; border-radius:4px">              <!--div that sorts the users ids-->
+    </div>
+    <div id="tweet" style="background-color:lightcyan; border:1px solid black; border-radius:4px">              <!--div that sorts the tweet id-->
+    </div>
+    <div>
+    <table style="width:50%">                                                                                   <!--table that holds users screen names-->
+    <tr>
+    <th colspan="5" style="width:50%; background-color:white"><center>Users</center></th>                       
+    </tr>
+    <tr style="width:10%" id="firstRow"></tr>
+    </table>
+    </div>
+    </body >
+    </html >
